@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Main Page</title>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aladin:n4:default.js" type="text/javascript"></script>
+<script type="text/javascript">
+function validate()
+{
+   if( document.myForm.firstname.value == "" )
+   {
+     alert( "Please provide your name!" );
+     document.myForm.firstname.focus() ;
+     return false;
+   }
+
+   if( document.myForm.surname.value == "" )
+   {
+     alert( "Please provide your name!" );
+     document.myForm.surname.focus() ;
+     return false;
+   }
+   if( document.myForm.EMail.value == "" )
+   {
+     alert( "Please provide your Email!" );
+     document.myForm.EMail.focus() ;
+     return false;
+   }
+   if( document.myForm.tel.value == "" ||
+           isNaN( document.myForm.tel.value ) ||
+           document.myForm.tel.value.length != 10 )
+   {
+     alert( "Please provide a valid contact no!" );
+     document.myForm.tel.focus() ;
+     return false;
+   }
+
+   if( document.myForm.sub.value == "" )
+   {
+     alert( "Please provide the subject!" );
+     document.myForm.sub.focus() ;
+     return false;
+   }
+
+   if( document.myForm.place.value == "" )
+   {
+     alert( "Please provide the place!" );
+     document.myForm.place.focus() ;
+     return false;
+   }
+   if( document.myForm.enq.value == "" )
+   {
+     alert( "Please provide enquiry details!" );
+     document.myForm.enq.focus() ;
+     return false;
+   }
+   return( true );
+}
+</script>
+<link href="content.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+  <header id="top">
+    <h1>Explore !ndia</h1>
+    <nav id="mainnav">
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="discover.html">Discover India</a></li>
+        <li><a href="darjeeling.html"> Destinations</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="form.html">Enquiry Form</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <h2>Enquiry Form</h2>
+    <form id="form1" name="myForm" method="post" onsubmit="return(validate());" action="http://localhost/learningphp/form.php">
+      <p> First Name:
+        <input type="text" name="firstname" id="textfield">
+      </p>
+      <p>
+        <label for="textfield2"> Surname:  </label>
+        <input type="text" name="surname" id="textfield2">
+      </p>
+      <p>
+        <label for="email"> Email ID:</label>
+          <input type="email" name="EMail" id="email">
+      </p>
+      <p>
+        <label for="tel">Contact :</label>
+        <input type="tel" name="tel" id="tel">
+      </p>
+      <p>Subject
+        <label for="textfield4">:</label>
+        <input type="text" name="sub" id="textfield4">
+      </p>
+      <p>
+        <label for="textfield3"> Place : </label>
+        <input type="text" name="place" id="textfield3">
+      </p>
+      <p>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+      </p>
+      <p>Enquiry Details:</p>
+      <p>
+        <textarea name="enq" id="textarea"></textarea>
+      </p>
+      <p>
+        <input type="reset" name="reset" id="reset" value="Reset">
+          <input type="submit" name="submit" id="submit" value="Submit">
+      </p>
+    </form>
+    <p>&nbsp;</p>
+    <h3>&nbsp;</h3>
+  </main>
+</div>
+</body>
+</html>
